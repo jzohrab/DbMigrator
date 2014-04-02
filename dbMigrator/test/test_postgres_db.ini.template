@@ -1,0 +1,28 @@
+# Settings for postgres unit test databases.
+# COPY this file to "test_postgres_db.ini", and fill in your keys.
+# All keys here are required (tests should fail if these keys are missing)
+# See ../database_connections.ini.template for additional notes.
+
+# system_connection is used for operations like db creation and deletion.
+# NOTE: ensure that this user actually exists in your postgres database.
+[Server]
+host = 'localhost'
+dbname = 'postgres'
+user = 'postgres'
+password = 'admin'
+
+[Databases]
+# The databases testdb_1 and testdb_2 will be repeatedly dropped and
+# recreated during the tests.  The key names must stay as-is for the tests.
+
+  [[t1]]
+  host = 'localhost'
+  dbname = 'testdb_1'
+  user = 'postgres'
+  password = 'admin'
+
+  [[t2]]
+  host = 'localhost'
+  dbname = 'testdb_2'
+  user = 'postgres'
+  password = 'admin'

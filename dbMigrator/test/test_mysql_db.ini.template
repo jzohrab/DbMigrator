@@ -1,0 +1,32 @@
+# Settings for mysql unit test databases.
+#
+# COPY this file to "test_mysql_db.ini", and fill in your keys.
+# All keys here are required (tests should fail if these keys are missing)
+# See ../database_connections.ini.template for additional notes.
+
+# system_connection is used for operations like db creation and deletion.
+# NOTE: ensure you actually create this user and grant privileges
+# with the values given for "user" and "password" below.
+#   create user 'user'@'localhost' identified by 'passwd';
+#   grant all privileges on *.* to 'user'@'localhost' with grant option;
+[Server]
+host = 'localhost'
+dbname = 'mysql'
+user = 'user'
+password = 'passwd'
+
+[Databases]
+# The databases testdb_1 and testdb_2 will be repeatedly dropped and
+# recreated during the tests.  The key names must stay as-is for the tests.
+
+  [[t1]]
+  host = 'localhost'
+  dbname = 'testdb_1'
+  user = 'user'
+  password = 'passwd'
+
+  [[t2]]
+  host = 'localhost'
+  dbname = 'testdb_2'
+  user = 'user'
+  password = 'passwd'

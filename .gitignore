@@ -1,0 +1,6 @@
+# User must create their own .ini file from **.ini.template
+**/*.ini
+
+# Misc
+**/*.pyc
+**/*.log

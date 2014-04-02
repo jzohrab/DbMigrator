@@ -1,0 +1,32 @@
+# Settings for the DefaultDatabaseConnector.
+
+# COPY this file and rename it as you would like, and fill in the keys
+# and values.  All sections here are required.  The database
+# connection component given here are consumed by the DatabaseHandler
+# instance being used (eg, Postgres, MySql, etc).
+
+# System connection used for operations such as db creation and
+# deletion.  Should have admin rights on the server.
+[Server]
+host = 'localhost'
+dbname = 'postgres'
+user = 'postgres'
+password = 'admin'
+
+# Databases.
+#
+# Each subsection is a database.  The subsection name can be a short
+# nickname of the database to be created.
+[Databases]
+
+  [[db1]]
+  host = 'localhost'
+  dbname = 'testdb_1'
+  user = 'postgres'
+  password = 'admin'
+
+  [[db2]]
+  host = 'localhost'
+  dbname = 'testdb_2'
+  user = 'postgres'
+  password = 'admin'

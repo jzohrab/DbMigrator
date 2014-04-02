@@ -1,0 +1,25 @@
+# Settings for the mysql example.
+
+# COPY this file and rename it to mysql_connections.ini, and fill in the connection components.
+
+# System connection used for operations such as db creation and
+# deletion.  Should have admin rights on the server.
+[Server]
+host = 'localhost'
+dbname = 'mysql'
+user = 'user'
+password = 'admin'
+
+# Databases: The key MUST be "mysql_test", as the example assumes
+# that the database files are in a schema directory, under subfolder
+# "mysql_test".  Note that the dbname can be different than the key
+# name.
+
+[Databases]
+
+  [[mysql_test]]
+  host = 'localhost'
+  dbname = 'my_mysql_test'
+  user = 'user'
+  password = 'admin'
+

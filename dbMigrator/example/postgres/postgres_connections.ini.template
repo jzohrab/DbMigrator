@@ -1,0 +1,25 @@
+# Settings for the postgres example.
+
+# COPY this file and rename it to postgres_connections.ini, and fill in the connection components.
+
+# System connection used for operations such as db creation and
+# deletion.  Should have admin rights on the server.
+[Server]
+host = 'localhost'
+dbname = 'postgres'
+user = 'postgres'
+password = 'admin'
+
+# Databases: The key MUST be "postgres_test", as the example assumes
+# that the database files are in a schema directory, under subfolder
+# "postgres_test".  Note that the dbname can be different than the key
+# name.
+
+[Databases]
+
+  [[postgres_test]]
+  host = 'localhost'
+  dbname = 'my_postgres_test'
+  user = 'postgres'
+  password = 'admin'
+
