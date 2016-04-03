@@ -8,10 +8,10 @@ import glob
 from migrator import DatabaseSource
 
 class DefaultDatabaseSource(DatabaseSource):
-    """Default source for database scripts and connections that can be
-used by people following the suggested directory layout.
+    """Default source for database scripts and connection data.
 
-Database file directories must be as follows:
+Can be used as-is for projects following the below directory layout:
+
 - <root directory>
   - db_1_name
     - baseline_schema
