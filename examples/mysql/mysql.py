@@ -4,10 +4,10 @@ import inspect
 import ConfigParser
 import argparse
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../../dbMigrator')
-from driver import Driver
-from defaultdatabasesource import DefaultDatabaseSource
-from mysqldatabasehandler import MySqlDatabaseHandler
+import dbMigrator
+from dbMigrator.driver import Driver
+from dbMigrator.defaultdatabasesource import DefaultDatabaseSource
+from dbMigrator.mysqldatabasehandler import MySqlDatabaseHandler
 
 
 class MySqlExample:
