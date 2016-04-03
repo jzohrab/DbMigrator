@@ -30,8 +30,37 @@ Execute 10_vX.sql on postgres_test
 Execute bootstrap_data.sql on postgres_test
 ````
 
-The example above follows the ideas outlined in [Managing Database Changes](docs/managing_database_changes.md).
+The examples follows the notes in [Managing Database
+Changes](docs/managing_database_changes.md).  If your database project
+follows the directory structure of these examples, the code can be
+used as-is.
 
+## Testing
+
+Some of the tests manipulate actual databases running on your system.
+Start the local mysql and postgres database servers before running
+tests.
+
+### User accounts
+
+The tests assume the existence of the following accounts with admin access
+to the databases (to create and destroy objects, etc):
+
+|&nbsp;|MySql|Postgres|
+|---   |---  |--- |
+|host  |localhost|localhost|
+|dbname|mysql|postgres|
+|admin username|user|postgres|
+|admin password|passwd|admin|
+
+### Running tests
+
+cd to the `dbMigrator` subfolder and run the tests:
+
+```
+$ cd dbMigrator
+$ python -m unittest discover
+```
 
 ## System Requirements
 
