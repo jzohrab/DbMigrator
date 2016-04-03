@@ -1,8 +1,5 @@
 import logging
 import sys
-import psycopg2
-import psycopg2.extensions
-import re
 from abc import ABCMeta, abstractmethod
 
 

@@ -1,8 +1,6 @@
 import sys
 import os
 import inspect
-import ConfigParser
-import argparse
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 import dbMigrator
