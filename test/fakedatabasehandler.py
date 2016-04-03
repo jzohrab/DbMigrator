@@ -5,8 +5,8 @@ import re
 import inspect
 import ConfigParser
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../')
-from migrator import DatabaseHandler
+import dbMigrator
+from dbMigrator.migrator import DatabaseHandler
 
 
 class FakeDatabaseHandler(DatabaseHandler):
