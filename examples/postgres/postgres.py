@@ -4,7 +4,7 @@ import inspect
 import ConfigParser
 import argparse
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../../')
+sys.path.append(os.path.abspath(sys.path[0]) + '/../../dbMigrator')
 from driver import Driver
 from defaultdatabasesource import DefaultDatabaseSource
 from postgresdatabasehandler import PostgresDatabaseHandler
