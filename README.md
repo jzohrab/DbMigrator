@@ -15,12 +15,13 @@ Notes on the code, including unit testing and implementing custom extensions to 
 
 ## Examples
 
-Working examples are in `dbMigrator/example`.  See [Examples](docs/examples.md).  If your database project follows the directory structure of these examples, the code can be used as-is.
+The `examples` folder contains some running examples.  See the the
+[README](/examples/README.md).
 
-Here is a sample run:
+A sample run:
 
 ````
-> python postgres.py -nsu
+> python examples/postgres/postgres.py -nsu
 Dropping and recreating postgres_test
 Execute Db.sql on postgres_test
 Execute 20130427_add_a_size.sql on postgres_test

@@ -1,6 +1,6 @@
 # Examples
 
-There are working examples in the dbMigrator/example folder for postgres and mysql (both in their own subfolders).
+This folder contains working examples for postgres and mysql.
 
 ## Postgres
 
@@ -51,7 +51,7 @@ Execute 10_vX.sql on postgres_test
 Execute bootstrap_data.sql on postgres_test
 ````
 
-More notes on schema, migrations, code, and data are given in [Managing Database Changes](managing_database_changes.md).
+More notes on schema, migrations, code, and data are given in [Managing Database Changes](../docs/managing_database_changes.md).
 
 
 ## MySQL
