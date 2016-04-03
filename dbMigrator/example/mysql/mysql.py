@@ -35,6 +35,8 @@ Execute bootstrap_data.sql on mysql_test
         d = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
         inifile = os.path.join(d, 'mysql_connections.ini')
         if not os.path.exists(inifile):
+            inifile = inifile + '.template'
+        if not os.path.exists(inifile):
             raise Exception("Missing ini file at " + inifile)
 
         dds = DefaultDatabaseSource(inifile, d)
