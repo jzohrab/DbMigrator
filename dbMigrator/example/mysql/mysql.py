@@ -30,8 +30,11 @@ Execute 10_vX.sql on mysql_test
 Execute bootstrap_data.sql on mysql_test
 ````
     """
-    
-    def main(self):
+
+    @staticmethod
+    def build_driver():
+        """Factory method."""
+
         d = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
         inifile = os.path.join(d, 'mysql_connections.ini')
         if not os.path.exists(inifile):
@@ -45,12 +48,11 @@ Execute bootstrap_data.sql on mysql_test
         driver.default_database = "mysql_test"
         driver.is_debug_printing = True
 
-        driver.main(sys.argv)
-
+        return driver
 
 def main():
-    p = MySqlExample()
-    p.main()
+    d = MySqlExample.build_driver()
+    d.main(sys.argv)
 
 if __name__ == '__main__':
     main()
