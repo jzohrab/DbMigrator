@@ -17,7 +17,7 @@ class DefaultDatabaseSource_Tests(unittest.TestCase):
     def setUp(self):
         d = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
         inifile = os.path.join(d, 'test_postgres_db.ini')
-        rootdir = os.path.join(d, 'testDatabase')
+        rootdir = os.path.join(d, 'test_defaultdatabasesource_scripts')
         if not os.path.exists(inifile):
             raise Exception("Missing ini file at " + inifile)
         self.dds = DefaultDatabaseSource(inifile, rootdir)
