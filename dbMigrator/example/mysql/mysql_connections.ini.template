@@ -1,6 +1,15 @@
-# Settings for the mysql example.
+# Mysql example settings.
 
-# COPY this file and rename it to mysql_connections.ini, and fill in the connection components.
+# Instructions:
+#
+# COPY this file and rename it to mysql_connections.ini, and fill in
+# the [Server] section.  Leave the [Databases] section as-is.
+#
+# The example will use this .template file as-is if an .ini file is
+# not found.
+
+########
+# Config
 
 # System connection used for operations such as db creation and
 # deletion.  Should have admin rights on the server.
@@ -8,7 +17,7 @@
 host = 'localhost'
 dbname = 'mysql'
 user = 'user'
-password = 'admin'
+password = 'passwd'
 
 # Databases: The key MUST be "mysql_test", as the example assumes
 # that the database files are in a schema directory, under subfolder
@@ -21,5 +30,5 @@ password = 'admin'
   host = 'localhost'
   dbname = 'my_mysql_test'
   user = 'user'
-  password = 'admin'
+  password = 'passwd'
 
