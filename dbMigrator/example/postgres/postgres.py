@@ -16,11 +16,7 @@ applies them to a postgres database.  Parses command-line arguments to
 determine which actions to take (call "python this_file.py -h" for
 details):  You can create a new db, upgrade it, etc.
 
-Configuration: To use this example, copy postgres_connections.ini.template (in
-this directory) to postgres_connections.ini, and fix the connection component
-entries.  Leave the [Databases] key as postgres_test and the dbname as
-postgres_test, as the DefaultDatabaseSource assumes that the database
-root directory contains a folder by that name.
+Configuration: See postgres_connections.ini.template (in this directory).
 
 A sample run:
 
@@ -34,10 +30,13 @@ Execute 10_vX.sql on postgres_test
 Execute bootstrap_data.sql on postgres_test
 ````
     """
-    
-    def main(self):
+
+    @staticmethod
+    def build_driver():
         d = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
         inifile = os.path.join(d, 'postgres_connections.ini')
+        if not os.path.exists(inifile):
+            inifile = inifile + '.template'
         if not os.path.exists(inifile):
             raise Exception("Missing ini file at " + inifile)
 
@@ -47,12 +46,12 @@ Execute bootstrap_data.sql on postgres_test
         driver.default_database = "postgres_test"
         driver.is_debug_printing = True
 
-        driver.main(sys.argv)
+        return driver
 
 
 def main():
-    p = PostgresExample()
-    p.main()
+    d = PostgresExample.build_driver()
+    d.main(sys.argv)
 
 if __name__ == '__main__':
     main()

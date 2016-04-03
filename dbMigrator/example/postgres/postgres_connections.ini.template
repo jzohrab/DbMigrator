@@ -1,6 +1,15 @@
-# Settings for the postgres example.
+# Postgres example settings.
 
-# COPY this file and rename it to postgres_connections.ini, and fill in the connection components.
+# Instructions:
+#
+# COPY this file and rename it to postgres_connections.ini, and fill in
+# the [Server] section.  Leave the [Databases] section as-is.
+#
+# The example will use this .template file as-is if an .ini file is
+# not found.
+
+########
+# Config
 
 # System connection used for operations such as db creation and
 # deletion.  Should have admin rights on the server.
