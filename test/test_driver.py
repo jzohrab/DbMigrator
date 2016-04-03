@@ -4,10 +4,9 @@ import os
 import re
 import inspect
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../')
-from driver import Driver
-# from driver import Driver.ParsingException
-from migrator import DatabaseSource, DatabaseHandler
+import dbMigrator
+from dbMigrator.driver import Driver
+from dbMigrator.migrator import DatabaseSource, DatabaseHandler
 
 class FakeDatabaseSource(DatabaseSource):
     """Fake script provider.  See DatabaseSource for notes on class function."""

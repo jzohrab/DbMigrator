@@ -3,8 +3,8 @@ import sys
 import os
 import inspect
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../')
-from defaultdatabasesource import DefaultDatabaseSource
+import dbMigrator
+from dbMigrator.defaultdatabasesource import DefaultDatabaseSource
 
 class DefaultDatabaseSource_Tests(unittest.TestCase):
 

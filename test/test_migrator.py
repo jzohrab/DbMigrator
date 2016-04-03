@@ -4,13 +4,13 @@ import os
 import re
 import inspect
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/../')
-from migrator import Migrator
-from migrator import MigrationException
-from migrator import ScriptRunner
-from migrator import QueuedScriptCollection
-from migrator import ScriptRunnerException
-from migrator import DatabaseSource
+import dbMigrator
+from dbMigrator.migrator import Migrator
+from dbMigrator.migrator import MigrationException
+from dbMigrator.migrator import ScriptRunner
+from dbMigrator.migrator import QueuedScriptCollection
+from dbMigrator.migrator import ScriptRunnerException
+from dbMigrator.migrator import DatabaseSource
 from fakedatabasehandler import FakeDatabaseHandler
 
 

@@ -8,7 +8,7 @@ import postgres
 
 class PostgresExample_Tests(unittest.TestCase):
 
-    def test_schema_files(self):
+    def test_sanity_check(self):
         d = postgres.PostgresExample.build_driver()
         d.main(['example.py', '-nsu'])
 
