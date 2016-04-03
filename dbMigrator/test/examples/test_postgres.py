@@ -2,14 +2,14 @@ import unittest
 import sys
 import os
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/example/mysql')
+sys.path.append(os.path.abspath(sys.path[0]) + '/example/postgres')
 
-import mysql
+import postgres
 
-class MySqlExample_Tests(unittest.TestCase):
+class PostgresExample_Tests(unittest.TestCase):
 
     def test_schema_files(self):
-        d = mysql.MySqlExample.build_driver()
+        d = postgres.PostgresExample.build_driver()
         d.main(['example.py', '-nsu'])
 
 
