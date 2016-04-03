@@ -3,7 +3,8 @@
 # All keys here are required (tests should fail if these keys are missing)
 # See ../database_connections.ini.template for additional notes.
 
-# system_connection is used for operations like db creation and deletion.
+# System connection used for operations such as db creation and
+# deletion.  Should have admin rights on the server.
 # NOTE: ensure that this user actually exists in your postgres database.
 [Server]
 host = 'localhost'
