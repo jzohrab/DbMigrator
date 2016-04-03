@@ -2,7 +2,7 @@ import unittest
 import sys
 import os
 
-sys.path.append(os.path.abspath(sys.path[0]) + '/example/mysql')
+sys.path.append(os.path.abspath(sys.path[0]) + '/../examples/mysql')
 
 import mysql
 
