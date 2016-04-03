@@ -1,11 +1,7 @@
 import unittest
 import sys
 import os
-import re
 import inspect
-import ConfigParser
-import psycopg2
-import psycopg2.extensions
 
 sys.path.append(os.path.abspath(sys.path[0]) + '/../')
 from defaultdatabasesource import DefaultDatabaseSource
