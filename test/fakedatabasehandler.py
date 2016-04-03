@@ -1,10 +1,4 @@
 import unittest
-import sys
-import os
-import re
-import inspect
-import ConfigParser
-
 import dbMigrator
 from dbMigrator.migrator import DatabaseHandler
 

@@ -2,7 +2,6 @@ import logging
 import unittest
 import sys
 import os
-import re
 import inspect
 from configobj import ConfigObj
 import psycopg2

@@ -1,8 +1,4 @@
 import unittest
-import sys
-import os
-import re
-import inspect
 
 import dbMigrator
 from dbMigrator.migrator import Migrator
