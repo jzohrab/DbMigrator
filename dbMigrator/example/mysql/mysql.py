@@ -16,11 +16,7 @@ applies them to a mysql database.  Parses command-line arguments to
 determine which actions to take (call "python this_file.py -h" for
 details):  You can create a new db, upgrade it, etc.
 
-Configuration: To use this example, copy mysql_connections.ini.template (in
-this directory) to mysql_connections.ini, and fix the connection component
-entries.  Leave the [Databases] key as mysql_test and the dbname as
-mysql_test, as the DefaultDatabaseSource assumes that the database
-root directory contains a folder by that name.
+Configuration: See mysql_connections.ini.template (in this directory).
 
 A sample run:
 
