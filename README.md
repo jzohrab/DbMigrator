@@ -35,13 +35,13 @@ Changes](docs/managing_database_changes.md).  If your database project
 follows the directory structure of these examples, the code can be
 used as-is.
 
-## Testing
+## Development
 
-Some of the tests manipulate actual databases running on your system.
+### Database setup
+
+The tests and examples manipulate actual databases running on your system.
 Start the local mysql and postgres database servers before running
 tests.
-
-### User accounts
 
 The tests assume the existence of the following accounts with admin access
 to the databases (to create and destroy objects, etc):
@@ -53,22 +53,23 @@ to the databases (to create and destroy objects, etc):
 |admin username|user|postgres|
 |admin password|passwd|admin|
 
-### Running tests
-
-cd to the `dbMigrator` subfolder and run the tests:
+### Installation
 
 ```
-$ cd dbMigrator
-$ python -m unittest discover
+$ virtualenv venv
+$ source venv/bin/activate
+
+# Install dependencies
+(venv) $ make init
+
+# Run the unit tests
+(venv) $ make test
 ```
 
-## System Requirements
+### Contributing
 
-* Python (only tested on v. 2.7)
-* ConfigObj library (only tested with 5.0.6)
-* Six library
-* Postgres tests and example require Postgres and psycopg2 library
-* MySql tests and example require MySql and MySQLdb library
+See the [code overview](./docs/code_overview.md) for notes about structure.
 
-If running the unit tests, you'll need all the libraries.
-
+1. Fork the repo.
+2. Create the feature, add necessary test coverage, and ensure existing tests still pass.
+3. Push to your fork, and submit a GitHub pull request back to the master branch.
