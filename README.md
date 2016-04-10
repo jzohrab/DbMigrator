@@ -2,16 +2,26 @@
 
 ## Overview
 
-A simple command-line python framework to handle automatic DB migrations and updates, with working examples provided for MySQL and postgres.
+A simple command-line python framework to handle automatic DB
+migrations and updates, with working examples provided for MySQL and
+postgres.
 
-This tool was written for particular requirements that existing database migration tools (eg, Redgate, DbUp, etc) don't support:
+This tool was written for particular requirements that existing
+database migration tools (eg, Redgate, DbUp, etc) don't support:
 
-* cross platform (written in python, can support different database platforms.  Note that the concepts here can be easily ported to another language)
+* cross platform (written in python, can support different database
+  platforms.  Note that the concepts here can be easily ported to
+  another language)
 * database scripts are written in sensible platform-specific SQL dialect, not a DSL
-* suggests an approach to database change management comprised of baseline schema, migrations, reference files, and "database code" (e.g., views, stored procedures, etc).  See [Managing Database Changes](docs/managing_database_changes.md) for more detail.
+* suggests an approach to database change management comprised of
+  baseline schema, migrations, reference files, and "database code"
+  (e.g., views, stored procedures, etc).  See [Managing Database
+  Changes](docs/managing_database_changes.md) for more detail.
 * supports a distributed development model
 
-Notes on the code, including unit testing and implementing custom extensions to handle your project's migrations if necessary, are in the [code overview](docs/code_overview.md).
+Notes on the code, including unit testing and implementing custom
+extensions to handle your project's migrations if necessary, are in
+the [code overview](docs/code_overview.md).
 
 ## Examples
 
@@ -39,12 +49,12 @@ used as-is.
 
 ### Database setup
 
-The tests and examples manipulate actual databases running on your system.
-Start the local mysql and postgres database servers before running
-tests.
+The tests and examples manipulate actual databases running on your
+system.  Start the local mysql and postgres database servers before
+running tests.
 
-The tests assume the existence of the following accounts with admin access
-to the databases (to create and destroy objects, etc):
+The tests assume the existence of the following accounts with admin
+access to the databases (to create and destroy objects, etc):
 
 |&nbsp;|MySql|Postgres|
 |---   |---  |--- |
@@ -71,5 +81,7 @@ $ source venv/bin/activate
 See the [code overview](./docs/code_overview.md) for notes about structure.
 
 1. Fork the repo.
-2. Create the feature, add necessary test coverage, and ensure existing tests still pass.
-3. Push to your fork, and submit a GitHub pull request back to the master branch.
+2. Create the feature, add necessary test coverage, and ensure
+   existing tests still pass.
+3. Push to your fork, and submit a GitHub pull request back to the
+   master branch.
