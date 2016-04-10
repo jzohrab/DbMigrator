@@ -1,6 +1,8 @@
-# User must create their own .ini file from **.ini.template
-**/*.ini
+*.pyc
+*.log
 
-# Misc
-**/*.pyc
-**/*.log
+# User must create their own .ini file from **.ini.template
+*.ini
+
+# setup.py install
+build
