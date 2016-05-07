@@ -64,6 +64,10 @@ class MySqlDatabaseHandler(DatabaseHandler):
 
     def create_tracking_table(self, connection_hash):
         """Creates table if needed."""
+        # Mysql raising a 'table already exists' warning,
+        # regardless of the use of 'create table if not exists'.
+        # This can be ignored.
+        filterwarnings('ignore', category = MySQLdb.Warning)
         # Using lowercase table name, as MySql is case-sensitive.
         sql = """create table if not exists __schema_migrations
 (
@@ -72,6 +76,7 @@ class MySqlDatabaseHandler(DatabaseHandler):
   date_applied timestamp not null default CURRENT_TIMESTAMP
 )"""
         self.__execute(connection_hash, sql)
+        resetwarnings()
 
 
     def is_in_tracking_table(self, connection_hash, script_name):
